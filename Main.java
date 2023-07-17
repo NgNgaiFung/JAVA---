@@ -42,9 +42,8 @@ public class Main {
                 System.out.println("Please retry!");
                 input(player, map, width, length);
             }
-
-            return "Insert successfully!";
         }
+        return "Insert successfully!";
     }
 
     public static int winloss(char[][] map, int width, int height, int condition, int win){
