@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+// This is an Tic-Tac-Toe game (console)
+
 public class Main {
     public static String printlist(int a, int b, char[][] map){
         for (int i = 0; i < a; i++){
