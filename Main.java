@@ -22,13 +22,16 @@ public class Main {
         int input_x = -1;
         int input_y = -1;
         try{
-            while (input_x > 0 && input_x < (width-1)){
+            while (input_x < 0 || input_x > (width-1)){
                 System.out.print("Please enter value x:");
-                input_x = Integer.parseInt(read.nextLine());
+                int x = Integer.parseInt(read.nextLine());
+                input_x = x;
             }
-            while (input_y > 0 && input_y < (length-1)){
+            while (input_y < 0 || input_y > (length-1)){
                 System.out.print("Please enter value y:");
-                input_y = Integer.parseInt(read.nextLine());
+                int y = Integer.parseInt(read.nextLine());
+                input_y = y;
+
             }
         } catch(Exception e){
             System.out.println("Something went wrong.");
@@ -52,8 +55,8 @@ public class Main {
 
     
     public static int winloss(char[][] map, int width, int height, int condition, int win){
-        for (int x = 0; x < (condition - width + 1); x++){
-            for (int y = 0; y < (condition - height + 1); y++){
+        for (int x = 0; x < (width - condition + 1); x++){
+            for (int y = 0; y < (height - condition + 1); y++){
                 
                 // horizon
                 int countO = 0;
@@ -210,8 +213,8 @@ public class Main {
     }
 
     public static void main(String[] args){
-        final int width = 3;
-        final int height = 3;
+        final int width = 5;
+        final int height = 5;
         int win = 0; // who winning this game
         int condition = 3; // what is the condition of winning
         int player = 1;
