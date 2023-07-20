@@ -142,56 +142,6 @@ public class Main {
         win = 0;
         return win;
     }
-        
-
-    
-
-        // for (int x = 0; x < (condition - width + 1); x++){
-        //     for (int y = 0; y < (condition - height + 1); y++){
-        //         int count = 0;
-        //         for (int k = 0; k < condition; k++){
-        //             if (map[y+k][x] == 'X'){
-        //                 count++;
-        //             }
-        //             if (count == condition){
-        //                 win = 2;
-        //                 return win;
-        //             }
-        //         } // horizon
-        //         count = 0;
-        //         for (int k = 0; k < condition; k++){
-        //             if (map[y][x+k] == 'X'){
-        //                 count++;
-        //             }
-        //             if (count == condition){
-        //                 win = 2;
-        //                 return win;
-        //             }
-        //         } // vertical
-
-        //         count = 0;
-        //         for (int k = 0; k < condition; k++){
-        //             if (map[y+2-k][x+k] == 'X'){
-        //                 count++;
-        //             }
-        //             if (count == condition){
-        //                 win = 2;
-        //                 return win;
-        //             }
-        //         } // slide up
-
-        //         count = 0;
-        //         for (int k = 0; k < condition; k++){
-        //             if (map[y+k][x+k] == 'X'){
-        //                 count++;
-        //             }
-        //             if (count == condition){
-        //                 win = 2;
-        //                 return win;
-        //             }
-        //         } // slide up
-        //     }
-        // }
 
     public static String checkwhowin(int win) {
         if (win == 1) {
